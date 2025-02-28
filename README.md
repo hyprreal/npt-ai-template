@@ -1,4 +1,4 @@
-# Nuxt 3 Starter
+# Nuxt 3 Template
 ## Stack
 - TypeScript [https://www.typescriptlang.org/docs/]
 - Tailwind v4 [https://tailwindcss.com/docs/installation/using-vite]
