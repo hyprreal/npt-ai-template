@@ -20,3 +20,19 @@ Start the development server on `http://localhost:3000`:
 # npm
 npm run dev
 ```
+
+## Local DB (Supabase)
+See documentation: [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started)
+
+Requires a local installation of [Docker](https://www.docker.com/products/docker-desktop/)
+
+```bash
+## install cli
+brew install supabase/tap/supabase
+
+## initialize in project root
+supabase init
+
+## start stack
+supabase start
+```
