@@ -1,4 +1,4 @@
-export function convertDate(date: string) {
+export function YMDtoDateTime(date: string) {
   const dateParts = date.split('-')
   const year = parseInt(dateParts[0], 10)
   const month = parseInt(dateParts[1], 10) - 1
@@ -6,7 +6,7 @@ export function convertDate(date: string) {
   return new Date(year, month, day, 0, 0, 0)
 }
 
-export function convertBackDate(date: string) {
+export function dateTimeToYMD(date: string) {
   const year = new Date(date).getFullYear()
   const month = String(new Date(date).getMonth() + 1).padStart(2, '0')
   const day = String(new Date(date).getDate()).padStart(2, '0')
