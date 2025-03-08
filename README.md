@@ -1,7 +1,7 @@
 # Nuxt 3 Template
 ## Stack
-- TypeScript [https://www.typescriptlang.org/docs/]
-- Tailwind v4 [https://tailwindcss.com/docs/installation/using-vite]
+- TypeScript [https://www.typescriptlang.org/docs]
+- Tailwind v4 [https://tailwindcss.com/docs]
 - DrizzleORM (Postgres) [https://orm.drizzle.team/docs/overview]
 - Supabase (Disabled) [https://supabase.com/docs]
 
