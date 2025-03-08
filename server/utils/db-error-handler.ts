@@ -1,4 +1,8 @@
-export function handleDatabaseError(error) {
+interface DatabaseError {
+  code: string
+}
+
+export function handleDatabaseError(error: DatabaseError) {
   if (!error.code) {
     return { statusMessage: 'An unexpected error occurred', statusCode: 500 }
   }
