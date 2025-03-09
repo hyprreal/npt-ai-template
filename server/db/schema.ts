@@ -29,8 +29,5 @@ export const item = pgTable('item', {
   id: uuid('id').primaryKey().defaultRandom(),
   created_at: timestamp('created_at').defaultNow(),
   updated_at: timestamp('updated_at').defaultNow(),
-  strapi_id: text('strapi_id').notNull().unique(),
   name: text('name').notNull(),
-  description: text('description').notNull(),
-  photos: text('photos').array().notNull(),
 })
