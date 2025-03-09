@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const { data: item } = await useFetch('/api/item')
-console.log('items: ', item.value)
+const { data: items } = await useFetch('/api/item',)
+console.log('items: ', items.value)
 
-if (!item.value)
+if (!items.value)
   console.error({ statusCode: 404, message: 'Item not found' })
 
 useSeoMeta({
@@ -15,7 +15,11 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="container mx-auto p-4">
+  <div class="container mx-auto px-4">
     Hello World
+
+    <div v-for="item in items" :key="item.id" class="p-4 bg-gray-200">
+      {{ item }}
+    </div>
   </div>
 </template>
