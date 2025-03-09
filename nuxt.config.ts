@@ -1,17 +1,6 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: false },
-  css: ['~/assets/css/main.css'],
-  vite: {
-    plugins: [
-      tailwindcss(),
-    ],
-  },
-  experimental: {
-    viewTransition: true,
-  },
   modules: [
     '@nuxt/image',
     '@nuxt/eslint',
@@ -21,10 +10,21 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     // '@nuxtjs/supabase'
   ],
+  devtools: { enabled: false },
+  css: ['~/assets/css/main.css'],
+  experimental: {
+    viewTransition: true,
+  },
+  compatibilityDate: '2024-11-01',
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
   eslint: {
     config: {
-      stylistic: true
-    }
+      stylistic: true,
+    },
   },
   // supabase: {},
   image: {},
