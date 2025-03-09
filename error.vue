@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
-defineProps({
+const props = defineProps({
   error: Object as () => NuxtError,
 })
 
 const handleError = () => clearError({ redirect: '/' })
 
 useSeoMeta({
-  title: '404',
-  ogTitle: '404',
+  title: `Uh oh! - ${props.error?.statusCode}`,
+  ogTitle: `Uh oh! - ${props.error?.statusCode}`,
   description: 'You might be lost',
   ogDescription: 'You might be lost',
 })
