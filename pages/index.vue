@@ -1,4 +1,10 @@
 <script setup lang="ts">
+const { data: item } = await useFetch('/api/item')
+console.log('items: ', item.value)
+
+if (!item.value)
+  console.error({ statusCode: 404, message: 'Item not found' })
+
 useSeoMeta({
   title: 'Home',
   ogTitle: 'Home',
