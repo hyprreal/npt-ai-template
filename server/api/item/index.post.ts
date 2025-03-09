@@ -2,7 +2,7 @@ import { drizzle } from 'drizzle-orm/postgres-js'
 import postgres from 'postgres'
 // import { serverSupabaseUser } from '#supabase/server'
 import { item } from '@/server/db/schema'
-import { handleDatabaseError } from '@/server/utils/dbErrorHandler'
+import { handleDatabaseError } from '@/server/utils/db-error-handler'
 
 const connectionString = process.env.DATABASE_URL
 const client = postgres(connectionString as string)
