@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-potion: #F8455D;
+  --color-magic: #4038c8;
+  --color-black: #1f1d1d;
+}
