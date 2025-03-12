@@ -1,33 +1,37 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  compatibilityDate: '2024-11-01',
+  experimental: {
+    viewTransition: true,
+  },
+  runtimeConfig: {
+    // databaseUrl: process.env.DATABASE_URL,
+  },
+  devtools: { enabled: true },
   modules: [
-    '@nuxt/image',
     '@nuxt/eslint',
-    '@nuxt/icon',
+    '@nuxt/devtools',
     '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
     '@nuxt/scripts',
     '@vueuse/nuxt',
     // '@nuxtjs/supabase'
   ],
-  devtools: { enabled: false },
-  css: ['~/assets/css/main.css'],
-  experimental: {
-    viewTransition: true,
-  },
-  compatibilityDate: '2024-11-01',
   vite: {
     plugins: [
       tailwindcss(),
     ],
   },
+  css: ['~/assets/css/main.css'],
   eslint: {
     config: {
       stylistic: true,
     },
   },
-  // supabase: {},
   image: {},
+  // supabase: {},
   // $production: {
   //   routeRules: {
   //     '/signin': { prerender: true },
