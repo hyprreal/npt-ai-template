@@ -27,12 +27,21 @@ See documentation: [Supabase CLI](https://supabase.com/docs/guides/local-develop
 Requires a local installation of [Docker](https://www.docker.com/products/docker-desktop/)
 
 ```bash
-## install cli
+## install cli (globally)
 brew install supabase/tap/supabase
 
 ## initialize in project root
 supabase init
 
-## start stack
+## start stack (with docker running)
 supabase start
+```
+
+Optional
+```bash
+## merge schema from production
+supabase db diff
+
+## create seed file from production data
+supabase db dump --data-only
 ```
