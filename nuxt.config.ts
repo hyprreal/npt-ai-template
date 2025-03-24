@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@vueuse/nuxt',
-    // '@nuxt/test-utils/module',
+    '@nuxt/test-utils/module',
     // '@nuxtjs/supabase'
   ],
   vite: {
