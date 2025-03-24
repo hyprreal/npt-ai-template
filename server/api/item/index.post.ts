@@ -1,23 +1,9 @@
-import { drizzle } from 'drizzle-orm/postgres-js'
-import postgres from 'postgres'
 // import { serverSupabaseUser } from '#supabase/server'
-import { item } from '@/server/db/schema'
-import { handleDatabaseError } from '@/server/utils/db-error-handler'
-
-const connectionString = process.env.DATABASE_URL
-const client = postgres(connectionString as string)
-const db = drizzle(client)
+import { item } from '~/supabase/schema'
+import { db } from '~/server/utils/db-connection'
+import { handleDatabaseError } from '~/server/utils/db-error-handler'
 
 export default defineEventHandler(async (event) => {
-  // const user = await serverSupabaseUser(event)
-
-  // if (!user) {
-  //   throw createError({
-  //     statusCode: 401,
-  //     statusMessage: 'Unauthorized.',
-  //   })
-  // }
-
   const newItem = await readBody(event)
 
   try {
