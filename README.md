@@ -1,5 +1,6 @@
 # Nuxt 3 Template
 ## Stack
+- Nuxt 3 [https://nuxt.com/docs/getting-started/introduction]
 - TypeScript [https://www.typescriptlang.org/docs]
 - Tailwind v4 [https://tailwindcss.com/docs]
 - DrizzleORM (Postgres) [https://orm.drizzle.team/docs/overview]
