@@ -1,10 +1,11 @@
 import { defineConfig } from 'drizzle-kit'
+import env from './lib/env'
 
 export default defineConfig({
   dialect: 'postgresql',
-  schema: './supabase/schema/schema',
-  out: './supabase/migrations',
+  schema: './db/schema/schema',
+  out: './db/migrations',
   dbCredentials: {
-    url: process.env.LOCAL_DATABASE_URL as string,
+    url: env.LOCAL_DATABASE_URL,
   },
 })
