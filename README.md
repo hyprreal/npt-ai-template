@@ -4,7 +4,6 @@
 - TypeScript [https://www.typescriptlang.org/docs]
 - Tailwind v4 [https://tailwindcss.com/docs]
 - DrizzleORM (Postgres) [https://orm.drizzle.team/docs/overview]
-- Supabase (Disabled) [https://supabase.com/docs]
 
 ## Setup
 Make sure to install dependencies:
@@ -22,27 +21,4 @@ Start the development server on `http://localhost:3000`:
 npm run dev
 ```
 
-## Local DB (Supabase)
-See documentation: [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started)
-
-Requires a local installation of [Docker](https://www.docker.com/products/docker-desktop/)
-
-```bash
-## install cli (globally)
-brew install supabase/tap/supabase
-
-## initialize in project root
-supabase init
-
-## start stack (with docker running)
-supabase start
-```
-
-Optional
-```bash
-## merge schema from production
-supabase db diff
-
-## create seed file from production data
-supabase db dump --data-only
-```
+## Local DB (...)
