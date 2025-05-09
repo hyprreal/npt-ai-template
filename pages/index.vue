@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const { data: items } = await useFetch('/api/item',)
-console.log('items: ', items.value)
+import type { Item } from '~/types/item'
+
+const { data: items } = await useFetch<Item[]>('/api/item')
 
 if (!items.value)
   console.error({ statusCode: 404, message: 'Item not found' })
