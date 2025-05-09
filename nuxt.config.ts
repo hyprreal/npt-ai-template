@@ -13,12 +13,9 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/devtools',
     '@nuxt/fonts',
-    '@nuxt/icon',
     '@nuxt/image',
-    '@nuxt/scripts',
     '@vueuse/nuxt',
     '@nuxt/test-utils/module',
-    // '@nuxtjs/supabase'
   ],
   vite: {
     plugins: [
@@ -28,24 +25,12 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   eslint: {
     config: {
-      stylistic: true,
+      standalone: false,
     },
   },
   image: {},
-  // supabase: {},
   // $production: {
   //   routeRules: {
-  //     '/signin': { prerender: true },
-  //     '/signup': { prerender: true },
-  //     '/forgot-password': { prerender: true },
-  //     '/reset-password': { prerender: true },
-  //   },
-  //   scripts: {
-  //     registry: {
-  //       googleTagManager: {
-  //         id: 'GTM-',
-  //       },
-  //     },
   //   },
   // },
 })
