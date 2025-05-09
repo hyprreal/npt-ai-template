@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm'
-import { item } from '~/supabase/schema'
+import { item } from '~/db/schema'
 import { db } from '~/server/utils/db-connection'
 
 export default defineEventHandler(async (event) => {
