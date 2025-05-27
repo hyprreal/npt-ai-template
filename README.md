@@ -13,8 +13,8 @@
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
+# pnpm
+pnpm install
 ```
 
 ## Development Server
@@ -22,8 +22,8 @@ npm install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
+# pnpm
+pnpm dev
 ```
 
 ## Set up Local DB
