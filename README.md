@@ -1,11 +1,15 @@
 # Nuxt 3 Template
+
 ## Stack
+
 - Nuxt 3 [https://nuxt.com/docs/getting-started/introduction]
 - TypeScript [https://www.typescriptlang.org/docs]
 - Tailwind v4 [https://tailwindcss.com/docs]
-- DrizzleORM (Postgres) [https://orm.drizzle.team/docs/overview]
+- DrizzleORM [https://orm.drizzle.team/docs/overview]
+- Postgres [https://www.postgresql.org/docs]
 
 ## Setup
+
 Make sure to install dependencies:
 
 ```bash
@@ -14,6 +18,7 @@ npm install
 ```
 
 ## Development Server
+
 Start the development server on `http://localhost:3000`:
 
 ```bash
@@ -21,4 +26,34 @@ Start the development server on `http://localhost:3000`:
 npm run dev
 ```
 
-## Local DB (...)
+## Set up Local DB
+
+Requires a local installation of [Docker](https://www.docker.com/products/docker-desktop/)
+
+```bash
+## create & start docker services (postgres)
+pnpm db:start
+
+## migrate schema
+pnpm drizzle:migrate
+
+## seed database
+pnpm db:seed
+```
+
+Useful commands
+
+```bash
+## stop all docker services
+pnpm db:stop
+
+## reset all services (deletes all data!)
+pnpm db:reset
+```
+
+## Recommended VSCode Extensions
+
+- ESLint
+- Tailwind CSS IntelliSense
+- Vue - Official
+- Vitest

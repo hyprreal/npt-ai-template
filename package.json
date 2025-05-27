@@ -1,7 +1,7 @@
 {
   "name": "nuxt-3-template",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,7 +14,11 @@
     "drizzle:studio": "pnpm drizzle-kit studio",
     "drizzle:pull": "pnpm drizzle-kit pull",
     "drizzle:push": "pnpm drizzle-kit push",
-    "drizzle:migrate": "pnpm drizzle-kit migrate"
+    "drizzle:migrate": "pnpm drizzle-kit migrate",
+    "db:start": "docker-compose up -d",
+    "db:stop": "docker-compose down",
+    "db:reset": "docker-compose down -v && docker-compose up --build -d",
+    "db:seed": "cat db/seed/*.sql | docker exec -i postgres psql -U postgres -d postgres-dev"
   },
   "dependencies": {
     "@nuxt/eslint": "^1.3.0",
