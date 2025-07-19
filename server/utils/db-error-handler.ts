@@ -1,13 +1,14 @@
-interface DatabaseError {
-  code: string
-}
+export function handleDatabaseError(error: unknown) {
+  let code: string
 
-export function handleDatabaseError(error: DatabaseError) {
-  if (!error.code) {
+  if (error && typeof error === 'object' && 'code' in error) {
+    code = String(error.code)
+  }
+  else {
     return { statusMessage: 'An unexpected error occurred', statusCode: 500 }
   }
 
-  switch (error.code) {
+  switch (code) {
     case '23505': // Unique violation
       return {
         statusMessage: 'A record with this information already exists',
