@@ -1,7 +1,8 @@
 {
-  "name": "nuxt-3-template",
+  "name": "nuxt-4-template",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -23,6 +24,8 @@
     "db:seed": "cat db/seed/*.sql | docker exec -i postgres psql -U postgres -d postgres-dev"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.2.0",
     "@nuxt/eslint": "^1.6.0",
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.10.0",
@@ -31,7 +34,9 @@
     "@vueuse/nuxt": "^13.5.0",
     "better-auth": "^1.2.12",
     "drizzle-orm": "^0.43.1",
+    "drizzle-zod": "^0.8.2",
     "nuxt": "^4.0.0",
+    "nuxt-csurf": "^1.6.5",
     "postgres": "^3.4.7",
     "sanitize-html": "^2.17.0",
     "tailwindcss": "^4.1.11",
@@ -51,6 +56,5 @@
     "happy-dom": "^18.0.1",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
-  },
-  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
+  }
 }

@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import env from './lib/env'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
@@ -6,7 +7,11 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
   runtimeConfig: {
-    // databaseUrl: process.env.DATABASE_URL,
+    public: {
+      baseUrl: env.NODE_ENV === 'production'
+        ? 'http://localhost:3000'
+        : 'http://localhost:3000',
+    },
   },
   devtools: { enabled: true },
   modules: [
@@ -16,6 +21,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxt/test-utils/module',
+    'nuxt-csurf',
   ],
   vite: {
     plugins: [
@@ -30,7 +36,8 @@ export default defineNuxtConfig({
   },
   image: {},
   // $production: {
-  //   routeRules: {
-  //   },
+  routeRules: {
+    '/api/auth/**': { csurf: false }, // only better-auth handles these routes, mitigating conflicts
+  },
   // },
 })

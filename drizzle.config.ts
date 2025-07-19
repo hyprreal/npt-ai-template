@@ -3,9 +3,12 @@ import env from './lib/env'
 
 export default defineConfig({
   dialect: 'postgresql',
-  schema: './db/schema/schema',
+  schema: [
+    './db/schema/**/*.ts',
+    '!./db/schema/**/index.ts',
+  ],
   out: './db/migrations',
   dbCredentials: {
-    url: env.LOCAL_DATABASE_URL,
+    url: env.DATABASE_URL,
   },
 })
