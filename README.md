@@ -7,6 +7,7 @@
 - Tailwind v4 [https://tailwindcss.com/docs]
 - DrizzleORM [https://orm.drizzle.team/docs/overview]
 - Postgres [https://www.postgresql.org/docs]
+- BetterAuth [https://www.better-auth.com/docs/introduction]
 
 ## Setup
 
