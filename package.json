@@ -10,11 +10,13 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "test": "vitest",
     "drizzle:generate": "pnpm drizzle-kit generate",
     "drizzle:studio": "pnpm drizzle-kit studio",
     "drizzle:pull": "pnpm drizzle-kit pull",
     "drizzle:push": "pnpm drizzle-kit push",
     "drizzle:migrate": "pnpm drizzle-kit migrate",
+    "better:migrate": "pnpx @better-auth/cli migrate",
     "db:start": "docker-compose up -d",
     "db:stop": "docker-compose down",
     "db:reset": "docker-compose down -v && docker-compose up --build -d",
@@ -27,6 +29,7 @@
     "@tailwindcss/vite": "^4.1.11",
     "@unhead/vue": "^2.0.12",
     "@vueuse/nuxt": "^13.5.0",
+    "better-auth": "^1.2.12",
     "drizzle-orm": "^0.43.1",
     "nuxt": "^4.0.0",
     "postgres": "^3.4.7",
@@ -34,7 +37,7 @@
     "tailwindcss": "^4.1.11",
     "vue": "latest",
     "vue-router": "latest",
-    "zod": "^3.25.76"
+    "zod": "^4.0.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.17.0",
@@ -45,7 +48,7 @@
     "drizzle-kit": "^0.31.4",
     "eslint": "^9.31.0",
     "eslint-plugin-format": "^1.0.1",
-    "happy-dom": "^17.6.3",
+    "happy-dom": "^18.0.1",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
   },
