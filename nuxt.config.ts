@@ -32,7 +32,6 @@ export default defineNuxtConfig({
     },
   },
   image: {},
-  mdc: {},
   routeRules: {
     '/api/auth/**': { csurf: false }, // only better-auth handles these routes, mitigating conflicts
   },
