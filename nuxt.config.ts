@@ -7,11 +7,8 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
   runtimeConfig: {
-    public: {
-      baseUrl: env.NODE_ENV === 'production'
-        ? 'http://localhost:3000'
-        : 'http://localhost:3000',
-    },
+    openaiApiKey: env.OPENAI_API_KEY,
+    public: {},
   },
   devtools: { enabled: true },
   modules: [
@@ -20,8 +17,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@nuxt/test-utils/module',
     'nuxt-csurf',
+    '@nuxtjs/mdc',
   ],
   vite: {
     plugins: [
@@ -35,9 +32,8 @@ export default defineNuxtConfig({
     },
   },
   image: {},
-  // $production: {
+  mdc: {},
   routeRules: {
     '/api/auth/**': { csurf: false }, // only better-auth handles these routes, mitigating conflicts
   },
-  // },
 })

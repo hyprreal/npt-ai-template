@@ -1,3 +1,12 @@
+## Docker Compose for local PostgreSQL development
+# - Builds a Postgres image from the local Dockerfile and runs it as container "postgres".
+# - Initializes database "postgres-dev" with user/password "postgres".
+# - Persists data in a named volume "pgdata" mapped to /var/lib/postgresql/data.
+# - Exposes port 5432 on the host for application connections.
+# Usage:
+#   Start: docker compose up -d (pnpm db:start)
+#   Stop:  docker compose down   (pnpm db:stop)
+#   Reset: docker compose down -v (pnpm db:reset)
 services:
   postgres:
     build: .

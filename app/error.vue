@@ -1,3 +1,8 @@
+<!--
+  Global Nuxt error page component.
+  Purpose: renders a friendly error screen for unhandled errors and 404s, shows the status code,
+  sets SEO meta, and provides a button to clear the error and redirect to '/'.
+-->
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 

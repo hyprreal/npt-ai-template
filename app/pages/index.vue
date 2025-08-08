@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Item } from '~/types/item'
+import type { Item } from '~/types/item.example'
 
 const { data: items } = await useFetch<Item[]>('/api/item')
 

@@ -1,4 +1,4 @@
-# Nuxt 4 Template
+# NPT.ai
 
 ## Stack
 
@@ -8,6 +8,7 @@
 - DrizzleORM [https://orm.drizzle.team/docs/overview]
 - Postgres [https://www.postgresql.org/docs]
 - BetterAuth [https://www.better-auth.com/docs/introduction]
+- AI SDK [https://ai-sdk.dev/getting-started]
 
 ## Setup
 
@@ -57,4 +58,4 @@ pnpm db:reset
 - ESLint
 - Tailwind CSS IntelliSense
 - Vue - Official
-- Vitest
+- GitHub Copilot
