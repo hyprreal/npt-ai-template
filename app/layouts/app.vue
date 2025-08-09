@@ -14,7 +14,11 @@ useHead({
 <template>
   <main class="flex flex-col min-h-dvh bg-white">
     <div class="flex-grow">
+      <AppHeader />
+
       <slot />
+
+      <AppFooter />
     </div>
   </main>
 </template>

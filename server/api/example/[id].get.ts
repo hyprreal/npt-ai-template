@@ -1,7 +1,6 @@
-import { z } from 'zod'
 import { eq } from 'drizzle-orm'
-import { item } from '~~/db/schema/item'
-import { db } from '~~/server/utils/db-connection'
+import { z } from 'zod'
+import { item } from '~~/db/schema/example/index.example'
 
 export default defineEventHandler(async (event) => {
   const itemId = getRouterParam(event, 'id') as string
