@@ -8,7 +8,11 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     openaiApiKey: env.OPENAI_API_KEY,
-    public: {},
+    stripeSecretKey: env.STRIPE_SECRET_KEY,
+    public: {
+      stripePublishableKey: env.STRIPE_PUBLISHABLE_KEY,
+      stripePricingTableId: env.STRIPE_PRICING_TABLE_ID,
+    },
   },
   devtools: { enabled: true },
   modules: [
