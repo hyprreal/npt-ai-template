@@ -6,6 +6,14 @@ function handleLogin() {
   // Handle login logic here
   console.log('Email:', emailAddress.value)
 }
+
+useSeoMeta({
+  title: 'Sign In Page',
+  ogTitle: 'Sign In Page',
+  description: 'Nuxt 3 Template, with TypeScript, Tailwind 4, DrizzleORM and Supabase.',
+  ogDescription: 'Nuxt 3 Template, with TypeScript, Tailwind 4, DrizzleORM and Supabase.',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
