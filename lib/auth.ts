@@ -3,6 +3,7 @@ import { drizzleAdapter } from 'better-auth/adapters/drizzle'
 import { user_account, user_session, user_verification } from '~~/db/schema/auth'
 import { user } from '~~/db/schema/user'
 import { db } from '~~/server/utils/db-connection'
+import env from './env'
 
 export const auth = betterAuth({
   appName: 'npt.ai',
@@ -41,9 +42,9 @@ export const auth = betterAuth({
     // expiresIn: 3600,
   },
   socialProviders: {
-    // google: {
-    //   clientId: process.env.GOOGLE_CLIENT_ID,
-    //   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    // },
+    google: {
+      clientId: env.AUTH_GOOGLE_CLIENT_ID,
+      clientSecret: env.AUTH_GOOGLE_CLIENT_SECRET,
+    },
   },
 })
