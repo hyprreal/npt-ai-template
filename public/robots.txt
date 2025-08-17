@@ -1,1 +1,3 @@
-
+User-agent: *
+Allow: /
+Sitemap: https://npt-ai.com/sitemap.xml
