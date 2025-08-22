@@ -1,0 +1,13 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [{
+          "type": "command",
+          "command": "afplay -v 0.7 \"/System/Library/Sounds/Glass.aiff\""
+        }]
+      }
+    ]
+  }
+}
